@@ -1,15 +1,11 @@
 import React from 'react'
 import { Button, Card } from 'antd'
-import { useDispatch, useSelector } from 'react-redux'
 import { decrement, increment } from '../../features/counter/counterSlice'
+import {useAppDispatch, useAppSelector} from "../../redux/hooks";
 
 export const Counter: React.FC = () => {
-  // const count = useSelector((state) => state.counter.value);
-  const count = useSelector((state) => {
-    return JSON.stringify(state)
-  })
-  const dispatch = useDispatch()
-
+  const count = useAppSelector(state => state.counter.value);
+    const dispatch = useAppDispatch();
   return (
     <Card>
       <div>{count}</div>
