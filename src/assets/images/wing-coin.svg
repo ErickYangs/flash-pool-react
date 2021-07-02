@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>wing logo</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="zero-pool" transform="translate(-1173.000000, -482.000000)">
+            <g id="supply备份" transform="translate(980.000000, 402.000000)">
+                <g id="wing-logo" transform="translate(193.000000, 80.000000)">
+                    <circle id="椭圆形" fill="#FAFAFA" cx="32" cy="32" r="32"></circle>
+                    <path d="M38.744698,30.7532886 L34.6577181,37.8405369 L30.5696644,44.9277852 L26.4773154,52 L22.3892617,44.9181208 L26.4762416,37.8308725 L30.5685906,30.7489933 L24.3608054,20 L32.5347651,20 L34.6577181,23.6703356 L38.744698,30.7532886 Z M16.1804027,20 L8,20 L18.2969128,37.8351678 L22.3892617,30.7532886 L16.1804027,20 Z M50.9197315,23.6703356 L48.7978523,20 L40.6228188,20 L46.8327517,30.7532886 L42.7393289,37.8405369 L38.652349,44.9277852 L42.7393289,52 L46.8327517,44.9181208 L50.9197315,37.8308725 L55.0067114,30.7489933 L50.9197315,23.6703356 Z" id="Shape" fill="#000000" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

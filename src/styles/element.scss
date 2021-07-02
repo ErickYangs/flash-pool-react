@@ -1,0 +1,34 @@
+body {
+  .el-notification {
+    background: #272727;
+    border: none;
+  }
+
+  .el-notification__title {
+    color: #FFF;
+  }
+
+  .el-notification__content {
+    color: rgba(255, 255, 255, .6);
+    word-break: break-word;
+  }
+
+  .el-notification__closeBtn {
+    color: #FFF;
+  }
+
+  .el-popover {
+    background: #202020;
+    border: none;
+    color: rgba(255, 255, 255, .6);
+    box-shadow: none;
+    word-break: initial;
+  }
+
+  .popper__arrow {
+    border-top-color: #202020!important;
+    &::after {
+      border-top-color: #202020!important;
+    }
+  }
+}

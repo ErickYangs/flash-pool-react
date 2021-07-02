@@ -1,0 +1,234 @@
+.g-font-num { // 用于数字
+  font-weight: normal;
+  font-family: 'DINPro', 'PingFang SC', 微软雅黑, 黑体, Microsoft YaHei, SimHei, 'Open Sans', sans-serif;
+}
+
+.g-font-num-mid {
+  font-weight: 500;
+  font-family: 'DINPro-Medium', 'PingFang SC', 微软雅黑, 黑体, Microsoft YaHei, SimHei, 'Open Sans', sans-serif;
+}
+
+.g-font-num-bold {
+  font-weight: normal;
+  font-family: 'DINPro-BoldItalic', 'PingFang SC', 微软雅黑, 黑体, Microsoft YaHei, SimHei, 'Open Sans', sans-serif;
+}
+
+.g-font-bold { // 用于标题
+  font-weight: bold;
+  font-family: 'NoumenaFont-Bold', 'PingFang SC', 微软雅黑, 黑体, Microsoft YaHei, SimHei, 'Open Sans', sans-serif;
+}
+
+.g-container { // 安全区容器
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media (max-width: 750px) {
+    padding-left: .2rem;
+    padding-right: .2rem;
+  }
+}
+
+.g-card { // 灰底容器
+  padding: 30px 40px;
+  background: #121212;
+
+  @media (max-width: 750px) {
+    padding: .4rem 0;
+    background: none;
+  }
+}
+
+.g-border { // 圆角边框容器
+  padding: 40px 30px;
+  border-radius: 8px;
+  border: 1px solid #333333;
+}
+
+.g-table {
+  min-width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  border-spacing: 0;
+
+  @media (max-width: 750px) {
+    font-size: .24rem;
+  }
+
+  &.g-table--inline {
+    min-width: auto;
+    width: auto;
+    flex: 1;
+    //display: inline-table;
+
+    & + & {
+      margin-left: 2px;
+
+      td,th {
+        text-align: right;
+      }
+    }
+  }
+  tbody {
+    background: rgba(255, 255, 255, 0.03%);
+  }
+  &.g-table--hover {
+    tbody {
+      tr {
+        transition: background-color .3s;
+        &:hover {
+          cursor: pointer;
+          background: rgba(255, 255, 255, 0.05%);
+        }
+      }
+    }
+  }
+
+  thead {
+    th {
+      background: rgba(255, 255, 255, .1);
+    }
+  }
+
+  tr + tr {
+    border-top: 1px solid #202020;
+  }
+
+  th {
+    padding: 0 30px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, .8);
+    white-space: nowrap;
+    text-align: right;
+    line-height: 48px;
+
+    &:first-child {
+      text-align: left;
+    }
+
+    @media (max-width: 750px) {
+      padding: 0 .3rem;
+      font-size: .24rem;
+      line-height: .96rem;
+    }
+  }
+
+  td {
+    padding: 0 30px;
+    height: 85px;
+    text-align: right;
+    white-space: nowrap;
+
+    &:first-child {
+      text-align: left;
+    }
+
+    @media (max-width: 750px) {
+      padding: .36rem;
+      height: 1.6rem;
+    }
+  }
+
+  .g-table__space {
+    background-clip: padding-box;
+    border-right: 10px green;
+  }
+
+  .g-table__supply {
+    border-top: 2px solid var(--color-green);
+  }
+
+  .g-table__borrow {
+    border-top: 2px solid var(--color-yellow);
+  }
+
+  .g-table__insure {
+    border-top: 2px solid var(--color-pink);
+  }
+
+  .g-table__disable {
+    opacity: .3;
+  }
+}
+
+.g-btn-tip {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-des);
+}
+
+.g-sub-title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 40px;
+
+  @media (max-width: 750px) {
+    font-size: .4rem;
+    line-height: .4rem;
+  }
+}
+
+.g-unit {
+  margin-left: 4px;
+}
+
+.g-markets__icon { // todo make global css
+  vertical-align: middle;
+  width: 32px;
+}
+
+.g-markets__label {
+  margin-left: 14px;
+  vertical-align: middle;
+}
+
+.g-markets__sub-label {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 15px;
+  color: rgba(255, 255, 255, .3);
+}
+
+.m-back-color {
+  background: rgba(255, 255, 255, .03);
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.pc_show {
+  @media (max-width: 750px) {
+    display: none;
+  }
+}
+.mb_show {
+  display: none;
+  @media (max-width: 750px) {
+    display: block;
+  }
+}
+
+.alert-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.alert-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.alert-exit {
+  opacity: 1;
+}
+.alert-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
