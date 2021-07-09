@@ -1,4 +1,5 @@
 import moment from 'moment'
+import { getLocalStr } from './count'
 
 export const formatLongStr = (val: string, mid = '...', start = 4, end = 4) => {
   if (val.length <= start + end) {
@@ -13,3 +14,5 @@ export const formatUTC = (time: string | number) => {
   }
   return moment(time).utc().format('YYYY.MM.DD HH:mm:ss')
 }
+
+export const getDollarLabel = (val: string) => `$${getLocalStr(val)}`

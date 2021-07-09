@@ -1,12 +1,40 @@
-import {FC, useEffect, useRef, useState} from 'react'
+import { FC, useState } from 'react'
 import styles from './index.module.scss'
+import { openPage } from '../../../utils/tool'
 
-export const NavItem: FC = () => {
+type ListType = {
+  text: string
+  url: string
+}
+
+type PropType = {
+  title: string
+  url: string
+  list?: Array<ListType>
+}
+
+export const NavItem: FC<PropType> = ({ title, url, list }) => {
   const [isShowNavList, setIsShowNavList] = useState<boolean>(false)
 
-  useEffect(() => {
-    console.log('styles', styles)
-  }, [])
+  function renderItem(list: Array<ListType>) {
+    return (
+      <div className={styles.drop_list}>
+        <div>
+          {list.map((item) => (
+            <div
+              key={item.text}
+              onClick={() => {
+                openPage(item.url)
+              }}
+              className={styles.user_set}
+            >
+              {item.text}
+            </div>
+          ))}
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div
@@ -15,21 +43,16 @@ export const NavItem: FC = () => {
       onMouseLeave={() => setIsShowNavList(false)}
     >
       <div className={styles.main_title}>
-        <div className={styles.names}>title</div>
+        <div
+          onClick={() => {
+            openPage(url)
+          }}
+          className={styles.names}
+        >
+          {title}
+        </div>
       </div>
-      {isShowNavList ? (
-          <div className={styles.drop_list}>
-            <div>
-              <div className={styles.user_set}>111</div>
-              <div className={styles.user_set}>111</div>
-              <div className={styles.user_set}>111</div>
-              <div className={styles.user_set}>111</div>
-              <div className={styles.user_set}>111</div>
-            </div>
-          </div>
-      ) : (
-        ''
-      )}
+      {isShowNavList && list && renderItem(list)}
     </div>
   )
 }

@@ -83,7 +83,7 @@ export const HomePage: React.FC = () => {
       <BaseButton onClick={handlerLog} type={ButtonType.Go} label={'Submit'} />
       <BaseCheckBox checked={isCheck} onCheck={setIsCheck} />
       <NavArea />
-      <Card>
+      {/* <Card>
         <BaseButton onClick={handlerAddToken} type={ButtonType.Submit}>
           Add Token
         </BaseButton>
@@ -92,7 +92,7 @@ export const HomePage: React.FC = () => {
         <BaseButton onClick={handlerSwitchWork} type={ButtonType.Submit}>
           Add Network
         </BaseButton>
-      </Card>
+      </Card> */}
     </div>
   )
 }
